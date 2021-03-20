@@ -27,12 +27,10 @@ function html() {
 
 function css() {
     return src('src/css/**/*.css')
-        // .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
         }))
         .pipe(csso())
-        // .pipe(concat('style.css'))
         .pipe(gulp.dest('build/css'))
 }
 
